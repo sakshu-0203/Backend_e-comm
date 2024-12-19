@@ -51,6 +51,8 @@ async function updatecatagery(req, res) {
   }
 }
 
+
+
 module.exports = {
   createcategary,
   deletingcatagery,

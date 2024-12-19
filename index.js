@@ -8,14 +8,16 @@ console.log("index file is running");
 var categery = require("./routes/categery_router");
 var user = require("./routes/user_route");
 var admin = require("./routes/admin_route");
+var admin = require("./routes/products");
+var products = require("./routes/products");
 
 app.use("/api/categery", categery);
 app.use("/api/user", user);
 app.use("/api/admin", admin);
+app.use("/api/products", products);
 
 mongoose
-  .connect(
-    "mongodb+srv://Shubham:shubham4444@cluster.lu6ja.mongodb.net/?retryWrites=true&w=majority&appName=Cluster"
+  .connect("mongodb+srv://sakshiofficial0555:sakshi0607@cluster0.l39au.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => {})
   .catch((error) => {
@@ -27,3 +29,5 @@ console.log("file is running");
 app.listen(5030, () => {
   console.log("server running on port 5030");
 });
+
+
