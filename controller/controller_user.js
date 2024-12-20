@@ -6,7 +6,8 @@ var bcrypt = require("bcrypt");
 async function registeruser(req, res) {
   const { name, address, phone, password } = req.body;
 
-  
+  var saltRounds = 10;
+
 
   var hashpassword = await bcrypt.hash(password,saltRounds)
 

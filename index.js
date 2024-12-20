@@ -16,9 +16,7 @@ app.use("/api/user", user);
 app.use("/api/admin", admin);
 app.use("/api/products", products);
 
-mongoose
-  .connect("mongodb+srv://sakshiofficial0555:sakshi0607@cluster0.l39au.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-  )
+mongoose.connect("mongodb+srv://sakshiofficial0555:sakshi0607@cluster0.l39au.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
   .then(() => {})
   .catch((error) => {
     console.error("Error connecting to MongoDB:", error);

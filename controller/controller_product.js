@@ -37,6 +37,20 @@ async function addProducts(req, res) {
   }
 }
 
+async function getAllProducts(req, res) {
+  try {
+    var allproducts = await productsModel.find().populate('categary_type','name');
+
+    res.status(201).json({
+      message: " Added successfully",
+      allproducts,
+    });
+  } catch (error) {
+    res.status(500).json({ message: "something went wrong ", error });
+  }
+}
+
 module.exports = {
   addProducts,
+  getAllProducts,
 };
