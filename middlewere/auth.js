@@ -7,7 +7,7 @@ function verifyToken(req, res, next) {
     return res.status(403).json({ status: 0, message: "no token provided" });
   }
 
-  jwt.verify(token, "hello", (error, decoded) => {
+  jwt.verify(token, "privatekey", (error, decoded) => {
     if (error) {
       return res
         .status(500)
